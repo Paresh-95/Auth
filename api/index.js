@@ -8,11 +8,11 @@ const PORT = process.env.PORT|| 4000
 
 app.use(express.json())
 
-    const DbConnect = require("./config/Database")
+    const DbConnect = require("../config/Database")
     DbConnect.dbConnect();
 
 
-    const user = require("./routes/userRoutes")
+    const user = require("../routes/userRoutes")
     app.use("/api/v1",user)
 
 
